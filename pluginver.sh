@@ -1,0 +1,1 @@
+unzip -p $1 plugin.yml | grep -P -o '(?<=version: ).*'
