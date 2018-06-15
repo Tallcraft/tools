@@ -19,4 +19,4 @@ if [ -z ${2+x} ];
  	echo "Usage: $USAGE"
  	exit 1;
 fi
-find $1 -mtime +$2 -type f -iname '*.tar.gz' -delete -print
+find $1 -mtime +$2 -type f -iname '*.log.gz' -delete -print
