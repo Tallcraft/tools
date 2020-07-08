@@ -4,6 +4,7 @@ declare -a FARMWORLDS=("farm_overworld" "farm_nether" "farm_end")
 MARK2SERVERNAME=survival
 WORLD_BORDER_DIAMETER=4000
 WORLD_DIFFICULTY=hard
+RESPAWN_WORLD=survival2
 
 echo "This will reset the farmworlds. Press Enter to confirm!"
 read confirm
@@ -44,5 +45,6 @@ sleep 60
 for world in "${FARMWORLDS[@]}"
 do
    runCommand "mv modify set diff $WORLD_DIFFICULTY $world"
+   runCommand "mv modify set respawnworld $RESPAWN_WORLD $world"
    runCommand "wbhelper $world $WORLD_BORDER_DIAMETER"
 done
